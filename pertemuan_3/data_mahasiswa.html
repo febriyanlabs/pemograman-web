@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 24px;
+            background-color: #f3f6fa;
+            color: #243247;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 24px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #d7e0eb;
+            border-radius: 8px;
+        }
+
+        h1,
+        h2 {
+            color: #174a7e;
+        }
+
+        .form-row {
+            margin-bottom: 16px;
+        }
+
+        label,
+        legend {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 6px;
+            padding: 10px;
+            border: 1px solid #aab8c8;
+            border-radius: 4px;
+            font: inherit;
+        }
+
+        fieldset {
+            margin: 0 0 16px;
+            padding: 12px;
+            border: 1px solid #aab8c8;
+            border-radius: 4px;
+        }
+
+        fieldset label,
+        .checkbox-row label {
+            margin-right: 16px;
+            font-weight: normal;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: 0;
+            border-radius: 4px;
+            background-color: #174a7e;
+            color: #ffffff;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #10375e;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #aab8c8;
+            text-align: left;
+        }
+
+        thead,
+        tfoot {
+            background-color: #e4edf7;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            section {
+                padding: 14px;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Data Mahasiswa</h1>
+
+        <!-- Form pendaftaran menggunakan enam jenis elemen input. -->
+        <section aria-labelledby="judul-form">
+            <h2 id="judul-form">Formulir Mahasiswa</h2>
+            <form action="#" method="get">
+                <div class="form-row">
+                    <label for="nama">Nama lengkap</label>
+                    <input type="text" id="nama" name="nama" autocomplete="name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <fieldset>
+                    <legend>Jenis kelamin</legend>
+                    <label>
+                        <input type="radio" name="jenis_kelamin" value="laki-laki" required>
+                        Laki-laki
+                    </label>
+                    <label>
+                        <input type="radio" name="jenis_kelamin" value="perempuan">
+                        Perempuan
+                    </label>
+                </fieldset>
+
+                <div class="form-row">
+                    <label for="prodi">Program studi</label>
+                    <select id="prodi" name="prodi" required>
+                        <option value="">Pilih program studi</option>
+                        <option value="informatika">Informatika</option>
+                        <option value="sistem-informasi">Sistem Informasi</option>
+                        <option value="manajemen">Manajemen</option>
+                    </select>
+                </div>
+
+                <div class="form-row checkbox-row">
+                    <label>
+                        <input type="checkbox" name="persetujuan" value="setuju" required>
+                        Saya menyetujui data yang saya berikan.
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <label for="alamat">Alamat</label>
+                    <textarea id="alamat" name="alamat" rows="4"></textarea>
+                </div>
+
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+
+        <!-- Tabel berisi lima data mahasiswa; baris terakhir memakai colspan. -->
+        <section aria-labelledby="judul-tabel">
+            <h2 id="judul-tabel">Daftar Mahasiswa</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">NIM</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Prodi</th>
+                        <th scope="col">IPK</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2301001</td>
+                        <td>Andi Pratama</td>
+                        <td>Informatika</td>
+                        <td>3.75</td>
+                    </tr>
+                    <tr>
+                        <td>2301002</td>
+                        <td>Siti Rahma</td>
+                        <td>Sistem Informasi</td>
+                        <td>3.88</td>
+                    </tr>
+                    <tr>
+                        <td>2301003</td>
+                        <td>Budi Santoso</td>
+                        <td>Informatika</td>
+                        <td>3.52</td>
+                    </tr>
+                    <tr>
+                        <td>2301004</td>
+                        <td>Dewi Lestari</td>
+                        <td>Manajemen</td>
+                        <td>3.91</td>
+                    </tr>
+                    <tr>
+                        <td>2301005</td>
+                        <td>Rizky Maulana</td>
+                        <td>Sistem Informasi</td>
+                        <td>3.67</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Jumlah mahasiswa: 5</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
