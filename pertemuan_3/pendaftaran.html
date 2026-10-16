@@ -6,17 +6,28 @@
     <title>Pendaftaran Peserta</title>
 
     <style>
+
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         font-family: "Arial";
         background-color: #f4f8ff;
+        margin: 2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 24px;
       }
 
       form {
         display: flex;
+        background: #fff;
         flex-direction: column;
         gap: 10px;
-        padding: 10px;
-        margin-bottom: 10px;
+        padding: 25px 20px;
+        margin-bottom: 20px;
+        border: 1px solid #ccd;
       }
 
       h1 {
@@ -26,7 +37,7 @@
 
       table {
         border-collapse: collapse;
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
       }
 
@@ -34,6 +45,10 @@
         background-color: #1a56b0;
         color: white;
         padding: 6px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #fff;
       }
 
       td {
@@ -44,8 +59,21 @@
       button {
         background-color: #1a56b0;
         color: #fff;
-        padding: 10px 15px;
+        padding: 7px 15px;
         border: none;
+        cursor: pointer;
+      }
+
+      .aktif {
+        background-color: #e6eefb;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 12px;
+          max-width: 90%;
+          overflow-x: auto;
+        }
       }
     </style>
   </head>
@@ -55,13 +83,12 @@
     <form action="">
       <div>
         <label for="nama">Nama:</label>
-        <input type="text" name="nama" placeholder="Budi Santoso" /> <br />
+        <input type="text" name="nama" value="Budi Santoso" /> 
       </div>
       <div>
         <label for="">Jenis Kelamin:</label>
-        <input type="radio" /> <label for="">Laki</label><input type="radio" />
-        <label for="">Perempuan</label>
-        <br />
+        <input type="radio" /> <label for="">L</label><input type="radio" />
+        <label for="">P</label>
       </div>
       <div>
         <label for="">Jurusan:</label>
@@ -69,7 +96,6 @@
           <option value="">Informatika</option>
           <option value="">Sistem Informasi</option>
         </select>
-        <br />
       </div>
       <div>
         <button type="submit">Kirim</button>
@@ -82,12 +108,12 @@
         <th>Nama</th>
         <th>Jurusan</th>
       </tr>
-      <tr>
+      <tr class="aktif">
         <td>1</td>
         <td>Budi Santoso</td>
         <td>Informatika</td>
       </tr>
-      <tr>
+      <tr class="aktif">
         <td>2</td>
         <td>Sari Wulandari</td>
         <td>Sistem Informasi</td>
