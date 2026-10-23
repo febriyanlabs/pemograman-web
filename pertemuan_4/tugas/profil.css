@@ -1,0 +1,170 @@
+/*
+    NIM = 252520087
+    Nama = Febriyan Pramana Putra
+    Kelas = B
+*/
+
+:root {
+  --primary: #010736;
+  --bg: #0d1c42;
+  --text: rgb(252, 241, 208);
+}
+
+* {
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  color: var(--text);
+  scroll-behavior: smooth;
+
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Clarity City", sans-serif;
+  margin-top: 46px;
+  background-color: var(--bg);
+}
+
+
+/* NAVBAR */
+nav {
+  display: flex;
+  margin: 0 8rem;
+  justify-content: center;
+  gap: 200px;
+  margin-bottom: 9rem;
+}
+
+nav a {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: rgba(252, 241, 208, 0.8);
+  transition: all 0.11s ease;
+}
+
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 16rem;
+  max-width: 800px;
+}
+
+main h1 {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+}
+
+main .home {
+  align-items: center;
+  min-height: 100vh;
+}
+
+main .home p {
+  padding-top: 20px;
+  line-height: 1.8;
+}
+
+
+/* SKills */
+#skills {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 4rem;
+  align-items: center;
+}
+
+#skills h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(130px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  display: flex;
+  min-height: 180px;
+  width: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid rgb(252 241 208 / 16%);
+  border-radius: 12px;
+  background-color: rgb(252 241 208 / 5%);
+  text-align: center;
+  transition: transform 0.15s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  background-color: rgb(252 241 208 / 10%);
+}
+
+.skill-card img {
+  display: block;
+  width: 70px;
+}
+
+.skill-card figcaption {
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+
+/* Contact */
+.contact {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact h1 {
+    margin-bottom: 2rem;
+}
+
+.contact .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 2;
+}
+
+.contact .contact-list div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
+.contact .contact-list div img {
+    width: 35px;
+}
+
+
+.contact .contact-list div a:hover  {
+    color: rgba(252, 241, 208, 0.8);
+}
