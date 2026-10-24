@@ -1,3 +1,9 @@
+/*
+    NIM = 252520087
+    Nama = Febriyan Pramana Putra
+    Kelas = B
+*/
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f1f5f9;
@@ -30,6 +36,7 @@ h1 {
     background-color: #ffff;
     border: 2px solid #cbd5e1;
     border-radius: 12px;
+    box-sizing: border-box;
 }
 
 .tombol {
